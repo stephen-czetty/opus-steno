@@ -1,0 +1,7 @@
+{
+    "editor.fontSize": 16,
+    "editor.fontFamily": "Fira Code",
+    "editor.inlineHints.fontFamily": "Fira Code",
+    "terminal.integrated.fontSize": 16,
+    "editor.cursorStyle": "block"
+}
