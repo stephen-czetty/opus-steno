@@ -5,7 +5,7 @@ should ignore any data that is found in the padding.  This makes it ideal for st
 
 ## Learning golang
 
-This project is the one I picked for teaching myself golang.  I am starting with basically zero knowledge.4
+This project is the one I picked for teaching myself golang.  I am starting with basically zero knowledge.
 
 ## Resources
 
@@ -13,11 +13,12 @@ This project is the one I picked for teaching myself golang.  I am starting with
 - [Ogg container format](https://xiph.org/ogg/doc/rfc3533.txt)
 - [Matroska container format](https://www.matroska.org/technical/basics.html)
 
-## Initial design
+## Design
 
-Creating this before I learn anything about Go.  Specifics will have to come later.
+Creating this before I learn anything about Go.  As such, this is more of a high-level
+architecture without knowing how best to arrange it in a way Go likes.
 
-Initial thoughts:
+ ### Initial thoughts
 
 - Will write an opus header parser from scratch (even if a library exists, using it defeats the purpose of learning the language) ([#1](https://github.com/stephen-czetty/opus-steno/issues/1))
 - Everything should have unit tests associated with it.  Don't know enough about Go yet to go TDD, but I plan to cover my work as I go.
@@ -25,4 +26,20 @@ Initial thoughts:
 - Once the parsing works and all tests pass (with decent coverage, including failure paths), writing support needs to happen.
   - Given an opus stream, write a new one with different options (especially padding!) ([#3](https://github.com/stephen-czetty/opus-steno/issues/3))
   - Given an opus stream, place it into an ogg container ([#4](https://github.com/stephen-czetty/opus-steno/issues/4))
+  - (Bonus) Muxer for opus plus a video stream 
 
+### Components
+
+- Core
+  - Exception classes
+  - I/O helpers
+  - Etc.
+- Command-line
+  - Entry point
+  - Command-line parser
+- Opus
+  - Code to parse binary opus packets
+  - Code for writing opus packets
+- Ogg
+  - Parsing ogg containers
+  - Ogg container muxer
