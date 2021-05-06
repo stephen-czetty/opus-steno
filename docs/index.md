@@ -20,13 +20,14 @@ architecture without knowing how best to arrange it in a way Go likes.
 
  ### Initial thoughts
 
+- Need to learn how to structure a golang project ([#6](https://github.com/stephen-czetty/opus-steno/issues/6))
 - Will write an opus header parser from scratch (even if a library exists, using it defeats the purpose of learning the language) ([#1](https://github.com/stephen-czetty/opus-steno/issues/1))
 - Everything should have unit tests associated with it.  Don't know enough about Go yet to go TDD, but I plan to cover my work as I go.
 - Will also need an ogg container parser ([#2](https://github.com/stephen-czetty/opus-steno/issues/2))
 - Once the parsing works and all tests pass (with decent coverage, including failure paths), writing support needs to happen.
   - Given an opus stream, write a new one with different options (especially padding!) ([#3](https://github.com/stephen-czetty/opus-steno/issues/3))
   - Given an opus stream, place it into an ogg container ([#4](https://github.com/stephen-czetty/opus-steno/issues/4))
-  - (Bonus) Muxer for opus plus a video stream 
+  - (Bonus) Muxer for opus plus a video stream ([#5](https://github.com/stephen-czetty/opus-steno/issues/5))
 
 ### Components
 
@@ -43,3 +44,4 @@ architecture without knowing how best to arrange it in a way Go likes.
 - Ogg
   - Parsing ogg containers
   - Ogg container muxer
+    - Video stream support

@@ -3,5 +3,12 @@
     "editor.fontFamily": "Fira Code",
     "editor.inlineHints.fontFamily": "Fira Code",
     "terminal.integrated.fontSize": 16,
-    "editor.cursorStyle": "block"
+    "editor.cursorStyle": "block",
+    "cSpell.words": [
+        "Affero",
+        "Matroska",
+        "Muxer",
+        "Sublicensing",
+        "WIPO"
+    ]
 }
