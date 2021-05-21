@@ -75,3 +75,6 @@ arbitrary data inside of an OPUS-formatted audio file.  Doing this will require 
 work directly with the binary format and rewrite it.  I do not intend to write an actual
 encoder (I can leave that to ffmpeg), but instead I intend to write something that
 repackages the encoded audio with the secret data included.
+
+It should be fun.
+
