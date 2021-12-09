@@ -29,6 +29,30 @@ architecture without knowing how best to arrange it in a way Go likes.
   - Given an opus stream, place it into an ogg container ([#4](https://github.com/stephen-czetty/opus-steno/issues/4))
   - (Bonus) Muxer for opus plus a video stream ([#5](https://github.com/stephen-czetty/opus-steno/issues/5))
 
+### Episodes
+
+#### Getting started
+
+  - Building out the project structure
+  - Basic Go syntax
+  - Unit tests in Go
+
+#### TDD
+
+  - TDD in general, and why
+  - 
+
+#### Binary handling
+
+  - Reading an ogg file, outputting statistics about it
+  - Parsing the binary headers
+  - Moving around in the file (finding frames, etc)
+
+#### Coroutines
+
+  - Not sure where they will fit in, but I imagine that they might need their own episode.
+  - I guess this will come up whenever it comes up in the course of my implementation
+
 ### Components
 
 - Core
@@ -44,4 +68,12 @@ architecture without knowing how best to arrange it in a way Go likes.
 - Ogg
   - Parsing ogg containers
   - Ogg container muxer
-    - Video stream support
+  - Video stream support
+
+### Testing
+
+- Find a good audio file without copyright issues, and convert to opus.
+  - This will be the baseline test.
+  - First few tickets will not be modifying this file.
+    - Well, nothing should modify this file.  The code should always output to a new file
+  - 
