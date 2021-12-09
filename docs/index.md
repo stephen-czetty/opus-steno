@@ -31,7 +31,7 @@ architecture without knowing how best to arrange it in a way Go likes.
 
 ### Episodes
 
-#### Getting started
+#### [Getting started](scripts/episode1.md)
 
   - Building out the project structure
   - Basic Go syntax
