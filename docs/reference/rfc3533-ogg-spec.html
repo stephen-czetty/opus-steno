@@ -1,15 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0043)https://www.rfc-editor.org/rfc/rfc3533.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head profile="http://dublincore.org/documents/2008/08/04/dc-html/"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="robots" content="index,follow">
+    <meta name="creator" content="rfcmarkup version 1.129b">
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+      <meta name="DC.Identifier" content="urn:ietf:rfc:3533">
+      <meta name="DC.Relation.Replaces" content=""><meta name="DC.Creator" content="S. Pfeiffer"><meta name="DC.Date.Issued" content="May, 2003">
+       <meta name="DC.Title" content=" The Ogg Encapsulation Format Version 0 ">
+       <title>RFC 3533:  The Ogg Encapsulation Format Version 0 </title>    
+        
 
+        <style type="text/css">
+	@media only screen 
+	  and (min-width: 992px)
+	  and (max-width: 1199px) {
+	    body { font-size: 14pt; }
+            div.content { width: 96ex; margin: 0 auto; }
+        }
+	@media only screen 
+	  and (min-width: 768px)
+	  and (max-width: 991px) {
+            body { font-size: 14pt; }
+            div.content { width: 96ex; margin: 0 auto; }
+        }
+	@media only screen 
+	  and (min-width: 480px)
+	  and (max-width: 767px) {
+            body { font-size: 11pt; }
+            div.content { width: 96ex; margin: 0 auto; }
+        }
+	@media only screen 
+	  and (max-width: 479px) {
+            body { font-size: 8pt; }
+            div.content { width: 96ex; margin: 0 auto; }
+        }
+	@media only screen 
+	  and (min-device-width : 375px) 
+	  and (max-device-width : 667px) {
+            body { font-size: 9.5pt; }
+            div.content { width: 96ex; margin: 0; }
+        }
+	@media only screen 
+	  and (min-device-width: 1200px) {
+            body { font-size: 10pt; margin: 0 4em; }
+            div.content { width: 96ex; margin: 0; }
+        }
+        h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	    font-weight: bold;
+            line-height: 0pt;
+            display: inline;
+            white-space: pre;
+            font-family: monospace;
+            font-size: 1em;
+	    font-weight: bold;
+        }
+        pre {
+            font-size: 1em;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+	.pre {
+	    white-space: pre;
+	    font-family: monospace;
+	}
+	.header{
+	    font-weight: bold;
+	}
+        .newpage {
+            page-break-before: always;
+        }
+        .invisible {
+            text-decoration: none;
+            color: white;
+        }
+        a.selflink {
+          color: black;
+          text-decoration: none;
+        }
+        @media print {
+            body {
+                font-family: monospace;
+                font-size: 10.5pt;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                font-size: 1em;
+            }
+        
+            a:link, a:visited {
+                color: inherit;
+                text-decoration: none;
+            }
+            .noprint {
+                display: none;
+            }
+        }
+	@media screen {
+	    .grey, .grey a:link, .grey a:visited {
+		color: #777;
+	    }
+            .docinfo {
+                background-color: #EEE;
+            }
+            .top {
+                border-top: 7px solid #EEE;
+            }
+            .bgwhite  { background-color: white; }
+            .bgred    { background-color: #F44; }
+            .bggrey   { background-color: #666; }
+            .bgbrown  { background-color: #840; }            
+            .bgorange { background-color: #FA0; }
+            .bgyellow { background-color: #EE0; }
+            .bgmagenta{ background-color: #F4F; }
+            .bgblue   { background-color: #66F; }
+            .bgcyan   { background-color: #4DD; }
+            .bggreen  { background-color: #4F4; }
 
-
-
-
-
-Network Working Group                                        S. Pfeiffer
+            .legend   { font-size: 90%; }
+            .cplate   { font-size: 70%; border: solid grey 1px; }
+	}
+    </style>
+    <!--[if IE]>
+    <style>
+    body {
+       font-size: 13px;
+       margin: 10px 10px;
+    }
+    </style>
+    <![endif]-->    <script type="text/javascript"><!--
+    function addHeaderTags() {
+        var spans = document.getElementsByTagName("span");
+        for (var i=0; i < spans.length; i++) {
+            var elem = spans[i];
+            if (elem) {
+                var level = elem.getAttribute("class");
+                if (level == "h1" || level == "h2" || level == "h3" || level == "h4" || level == "h5" || level == "h6") {
+                    elem.innerHTML = "<"+level+">"+elem.innerHTML+"</"+level+">";               
+                }
+            }
+        }
+    }
+    var legend_html = "Colour legend:<br />      <table>         <tr><td>Unknown:</td>                   <td><span class='cplate bgwhite'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>         <tr><td>Draft:</td>                     <td><span class='cplate bgred'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>         <tr><td>Informational:</td>             <td><span class='cplate bgorange'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>         <tr><td>Experimental:</td>              <td><span class='cplate bgyellow'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>         <tr><td>Best Common Practice:</td>      <td><span class='cplate bgmagenta'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>         <tr><td>Proposed Standard:</td>         <td><span class='cplate bgblue'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>         <tr><td>Draft Standard (old designation):</td> <td><span class='cplate bgcyan'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>         <tr><td>Internet Standard:</td>         <td><span class='cplate bggreen'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>         <tr><td>Historic:</td>                  <td><span class='cplate bggrey'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>         <tr><td>Obsolete:</td>                  <td><span class='cplate bgbrown'>&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>     </table>";
+    function showElem(id) {
+        var elem = document.getElementById(id);
+        elem.innerHTML = eval(id+"_html");
+        elem.style.visibility='visible';
+    }
+    function hideElem(id) {
+        var elem = document.getElementById(id);
+        elem.style.visibility='hidden';        
+        elem.innerHTML = "";
+    }
+    // -->
+    </script></head><body><span class="pre noprint docinfo">[<a href="https://www.rfc-editor.org/" title="RFC Editor">RFC Home</a>] [<a href="https://www.rfc-editor.org/rfc/rfc3533.txt">TEXT</a>|<a href="https://www.rfc-editor.org/rfc/pdfrfc/rfc3533.txt.pdf">PDF</a>|<a href="https://www.rfc-editor.org/rfc/rfc3533.html">HTML</a>] [<a href="https://datatracker.ietf.org/doc/rfc3533" title="IETF Datatracker information for this document">Tracker</a>] [<a href="https://datatracker.ietf.org/ipr/search/?rfc=3533&amp;submit=rfc" title="IPR disclosures related to this document">IPR</a>] [<a href="https://www.rfc-editor.org/info/rfc3533" title="Info page">Info page</a>]                  </span><br><span class="pre noprint docinfo">                                                                        </span><br><span class="pre noprint docinfo">                                                           INFORMATIONAL</span><br><span class="pre noprint docinfo">                                                                        </span><pre>Network Working Group                                        S. Pfeiffer
 Request for Comments: 3533                                         CSIRO
 Category: Informational                                         May 2003
 
 
-                 The Ogg Encapsulation Format Version 0
+                 <span class="h1">The Ogg Encapsulation Format Version 0</span>
 
 Status of this Memo
 
@@ -32,22 +180,22 @@ Terminology
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
-   document are to be interpreted as described in BCP 14, RFC 2119 [2].
+   document are to be interpreted as described in <a href="https://www.rfc-editor.org/bcp/bcp14">BCP 14</a>, <a href="https://www.rfc-editor.org/rfc/rfc2119">RFC 2119</a> [<a href="https://www.rfc-editor.org/rfc/rfc3533.html#ref-2" title="&quot;Key words for use in RFCs to Indicate Requirement Levels&quot;">2</a>].
 
 Table of Contents
 
-   1. Introduction . . . . . . . . . . . . . . . . . . . . . . . . .   2
-   2. Definitions  . . . . . . . . . . . . . . . . . . . . . . . . .   2
-   3. Requirements for a generic encapsulation format  . . . . . . .   3
-   4. The Ogg bitstream format . . . . . . . . . . . . . . . . . . .   3
-   5. The encapsulation process  . . . . . . . . . . . . . . . . . .   6
-   6. The Ogg page format  . . . . . . . . . . . . . . . . . . . . .   9
-   7. Security Considerations  . . . . . . . . . . . . . . . . . . .  11
-   8. References . . . . . . . . . . . . . . . . . . . . . . . . . .  12
-   A. Glossary of terms and abbreviations  . . . . . . . . . . . . .  13
-   B. Acknowledgements . . . . . . . . . . . . . . . . . . . . . . .  14
-      Author's Address . . . . . . . . . . . . . . . . . . . . . . .  14
-      Full Copyright Statement . . . . . . . . . . . . . . . . . . .  15
+   <a href="https://www.rfc-editor.org/rfc/rfc3533.html#section-1">1</a>. Introduction . . . . . . . . . . . . . . . . . . . . . . . . .   <a href="https://www.rfc-editor.org/rfc/rfc3533.html#page-2">2</a>
+   <a href="https://www.rfc-editor.org/rfc/rfc3533.html#section-2">2</a>. Definitions  . . . . . . . . . . . . . . . . . . . . . . . . .   <a href="https://www.rfc-editor.org/rfc/rfc3533.html#page-2">2</a>
+   <a href="https://www.rfc-editor.org/rfc/rfc3533.html#section-3">3</a>. Requirements for a generic encapsulation format  . . . . . . .   <a href="https://www.rfc-editor.org/rfc/rfc3533.html#page-3">3</a>
+   <a href="https://www.rfc-editor.org/rfc/rfc3533.html#section-4">4</a>. The Ogg bitstream format . . . . . . . . . . . . . . . . . . .   <a href="https://www.rfc-editor.org/rfc/rfc3533.html#page-3">3</a>
+   <a href="https://www.rfc-editor.org/rfc/rfc3533.html#section-5">5</a>. The encapsulation process  . . . . . . . . . . . . . . . . . .   <a href="https://www.rfc-editor.org/rfc/rfc3533.html#page-6">6</a>
+   <a href="https://www.rfc-editor.org/rfc/rfc3533.html#section-6">6</a>. The Ogg page format  . . . . . . . . . . . . . . . . . . . . .   <a href="https://www.rfc-editor.org/rfc/rfc3533.html#page-9">9</a>
+   <a href="https://www.rfc-editor.org/rfc/rfc3533.html#section-7">7</a>. Security Considerations  . . . . . . . . . . . . . . . . . . .  <a href="https://www.rfc-editor.org/rfc/rfc3533.html#page-11">11</a>
+   <a href="https://www.rfc-editor.org/rfc/rfc3533.html#section-8">8</a>. References . . . . . . . . . . . . . . . . . . . . . . . . . .  <a href="https://www.rfc-editor.org/rfc/rfc3533.html#page-12">12</a>
+   <a href="https://www.rfc-editor.org/rfc/rfc3533.html#appendix-A">A</a>. Glossary of terms and abbreviations  . . . . . . . . . . . . .  <a href="https://www.rfc-editor.org/rfc/rfc3533.html#page-13">13</a>
+   <a href="https://www.rfc-editor.org/rfc/rfc3533.html#appendix-B">B</a>. Acknowledgements . . . . . . . . . . . . . . . . . . . . . . .  <a href="https://www.rfc-editor.org/rfc/rfc3533.html#page-14">14</a>
+      Author's Address . . . . . . . . . . . . . . . . . . . . . . .  <a href="https://www.rfc-editor.org/rfc/rfc3533.html#page-14">14</a>
+      Full Copyright Statement . . . . . . . . . . . . . . . . . . .  <a href="https://www.rfc-editor.org/rfc/rfc3533.html#page-15">15</a>
 
 
 
@@ -55,12 +203,12 @@ Table of Contents
 
 
 
-Pfeiffer                     Informational                      [Page 1]
-
-RFC 3533                          OGG                           May 2003
+<span class="grey">Pfeiffer                     Informational                      [Page 1]</span></pre>
+<hr class="noprint"><!--NewPage--><pre class="newpage"><span id="page-2"></span>
+<span class="grey"><a href="https://www.rfc-editor.org/rfc/rfc3533">RFC 3533</a>                          OGG                           May 2003</span>
 
 
-1. Introduction
+<span class="h2"><a class="selflink" id="section-1" href="https://www.rfc-editor.org/rfc/rfc3533.html#section-1">1</a>. Introduction</span>
 
    The Ogg bitstream format has been developed as a part of a larger
    project aimed at creating a set of components for the coding and
@@ -84,9 +232,9 @@ RFC 3533                          OGG                           May 2003
    packet boundaries.
 
    Please note that the MIME type application/ogg has been registered
-   with the IANA [1].
+   with the IANA [<a href="https://www.rfc-editor.org/rfc/rfc3533.html#ref-1" title="&quot;The application/ogg Media Type&quot;">1</a>].
 
-2. Definitions
+<span class="h2"><a class="selflink" id="section-2" href="https://www.rfc-editor.org/rfc/rfc3533.html#section-2">2</a>. Definitions</span>
 
    For describing the Ogg encapsulation process, a set of terms will be
    used whose meaning needs to be well understood.  Therefore, some of
@@ -111,15 +259,15 @@ RFC 3533                          OGG                           May 2003
 
 
 
-Pfeiffer                     Informational                      [Page 2]
-
-RFC 3533                          OGG                           May 2003
+<span class="grey">Pfeiffer                     Informational                      [Page 2]</span></pre>
+<hr class="noprint"><!--NewPage--><pre class="newpage"><span id="page-3"></span>
+<span class="grey"><a href="https://www.rfc-editor.org/rfc/rfc3533">RFC 3533</a>                          OGG                           May 2003</span>
 
 
    Please note that the term "packet" is not used in this document to
    signify entities for transport over a network.
 
-3. Requirements for a generic encapsulation format
+<span class="h2"><a class="selflink" id="section-3" href="https://www.rfc-editor.org/rfc/rfc3533.html#section-3">3</a>. Requirements for a generic encapsulation format</span>
 
    The design idea behind Ogg was to provide a generic, linear media
    transport format to enable both file-based storage and stream-based
@@ -158,7 +306,7 @@ RFC 3533                          OGG                           May 2003
    specifics about the codec data that it encapsulates and is thus
    independent of any media codec.
 
-4. The Ogg bitstream format
+<span class="h2"><a class="selflink" id="section-4" href="https://www.rfc-editor.org/rfc/rfc3533.html#section-4">4</a>. The Ogg bitstream format</span>
 
    A physical Ogg bitstream consists of multiple logical bitstreams
    interleaved in so-called "Pages".  Whole pages are taken in order
@@ -167,9 +315,9 @@ RFC 3533                          OGG                           May 2003
 
 
 
-Pfeiffer                     Informational                      [Page 3]
-
-RFC 3533                          OGG                           May 2003
+<span class="grey">Pfeiffer                     Informational                      [Page 3]</span></pre>
+<hr class="noprint"><!--NewPage--><pre class="newpage"><span id="page-4"></span>
+<span class="grey"><a href="https://www.rfc-editor.org/rfc/rfc3533">RFC 3533</a>                          OGG                           May 2003</span>
 
 
    header of each page of the physical bitstream.  This unique serial
@@ -223,9 +371,9 @@ RFC 3533                          OGG                           May 2003
 
 
 
-Pfeiffer                     Informational                      [Page 4]
-
-RFC 3533                          OGG                           May 2003
+<span class="grey">Pfeiffer                     Informational                      [Page 4]</span></pre>
+<hr class="noprint"><!--NewPage--><pre class="newpage"><span id="page-5"></span>
+<span class="grey"><a href="https://www.rfc-editor.org/rfc/rfc3533">RFC 3533</a>                          OGG                           May 2003</span>
 
 
    Ogg knows two types of multiplexing: concurrent multiplexing (so-
@@ -279,9 +427,9 @@ RFC 3533                          OGG                           May 2003
 
 
 
-Pfeiffer                     Informational                      [Page 5]
-
-RFC 3533                          OGG                           May 2003
+<span class="grey">Pfeiffer                     Informational                      [Page 5]</span></pre>
+<hr class="noprint"><!--NewPage--><pre class="newpage"><span id="page-6"></span>
+<span class="grey"><a href="https://www.rfc-editor.org/rfc/rfc3533">RFC 3533</a>                          OGG                           May 2003</span>
 
 
    together - all of the bos pages MUST appear before any data pages.
@@ -314,7 +462,7 @@ RFC 3533                          OGG                           May 2003
    logical bitstreams will typically be interleaved in chronological
    order.
 
-5. The encapsulation process
+<span class="h2"><a class="selflink" id="section-5" href="https://www.rfc-editor.org/rfc/rfc3533.html#section-5">5</a>. The encapsulation process</span>
 
    The process of multiplexing different logical bitstreams happens at
    the level of pages as described above.  The bitstreams provided by
@@ -335,9 +483,9 @@ RFC 3533                          OGG                           May 2003
 
 
 
-Pfeiffer                     Informational                      [Page 6]
-
-RFC 3533                          OGG                           May 2003
+<span class="grey">Pfeiffer                     Informational                      [Page 6]</span></pre>
+<hr class="noprint"><!--NewPage--><pre class="newpage"><span id="page-7"></span>
+<span class="grey"><a href="https://www.rfc-editor.org/rfc/rfc3533">RFC 3533</a>                          OGG                           May 2003</span>
 
 
    A group of contiguous segments is wrapped into a variable length page
@@ -358,10 +506,10 @@ RFC 3533                          OGG                           May 2003
    both avoids imposing a maximum packet size as well as imposing
    minimum overhead on small packets.  In contrast, e.g., simply using
    two bytes at the head of every packet and having a max packet size of
-   32 kBytes would always penalize small packets (< 255 bytes, the
+   32 kBytes would always penalize small packets (&lt; 255 bytes, the
    typical case) with twice the segmentation overhead.  Using the lacing
    values as suggested, small packets see the minimum possible byte-
-   aligned overhead (1 byte) and large packets (>512 bytes) see a fairly
+   aligned overhead (1 byte) and large packets (&gt;512 bytes) see a fairly
    constant ~0.5% overhead on encoding space.
 
 
@@ -391,9 +539,9 @@ RFC 3533                          OGG                           May 2003
 
 
 
-Pfeiffer                     Informational                      [Page 7]
-
-RFC 3533                          OGG                           May 2003
+<span class="grey">Pfeiffer                     Informational                      [Page 7]</span></pre>
+<hr class="noprint"><!--NewPage--><pre class="newpage"><span id="page-8"></span>
+<span class="grey"><a href="https://www.rfc-editor.org/rfc/rfc3533">RFC 3533</a>                          OGG                           May 2003</span>
 
 
    The following diagram shows a schematic example of a media mapping
@@ -401,7 +549,7 @@ RFC 3533                          OGG                           May 2003
 
           logical bitstream with packet boundaries
  -----------------------------------------------------------------
- > |       packet_1             | packet_2         | packet_3 |  <
+ &gt; |       packet_1             | packet_2         | packet_3 |  &lt;
  -----------------------------------------------------------------
 
                      |segmentation (logically only)
@@ -447,9 +595,9 @@ bitstreams      | MUX |
 
 
 
-Pfeiffer                     Informational                      [Page 8]
-
-RFC 3533                          OGG                           May 2003
+<span class="grey">Pfeiffer                     Informational                      [Page 8]</span></pre>
+<hr class="noprint"><!--NewPage--><pre class="newpage"><span id="page-9"></span>
+<span class="grey"><a href="https://www.rfc-editor.org/rfc/rfc3533">RFC 3533</a>                          OGG                           May 2003</span>
 
 
    final very small one - and packet_3 is split into two segments.  The
@@ -460,7 +608,7 @@ RFC 3533                          OGG                           May 2003
    logical bitstream is multiplexed into a physical Ogg bitstream with
    pages of other logical bitstreams.
 
-6. The Ogg page format
+<span class="h2"><a class="selflink" id="section-6" href="https://www.rfc-editor.org/rfc/rfc3533.html#section-6">6</a>. The Ogg page format</span>
 
    A physical Ogg bitstream consists of a sequence of concatenated
    pages.  Pages are of variable size, usually 4-8 kB, maximum 65307
@@ -503,9 +651,9 @@ RFC 3533                          OGG                           May 2003
 
 
 
-Pfeiffer                     Informational                      [Page 9]
-
-RFC 3533                          OGG                           May 2003
+<span class="grey">Pfeiffer                     Informational                      [Page 9]</span></pre>
+<hr class="noprint"><!--NewPage--><pre class="newpage"><span id="page-10"></span>
+<span class="grey"><a href="https://www.rfc-editor.org/rfc/rfc3533">RFC 3533</a>                          OGG                           May 2003</span>
 
 
    The fields in the page header have the following meaning:
@@ -559,9 +707,9 @@ RFC 3533                          OGG                           May 2003
 
 
 
-Pfeiffer                     Informational                     [Page 10]
-
-RFC 3533                          OGG                           May 2003
+<span class="grey">Pfeiffer                     Informational                     [Page 10]</span></pre>
+<hr class="noprint"><!--NewPage--><pre class="newpage"><span id="page-11"></span>
+<span class="grey"><a href="https://www.rfc-editor.org/rfc/rfc3533">RFC 3533</a>                          OGG                           May 2003</span>
 
 
       frames encoded after this page.  This is a hint for the decoder
@@ -596,7 +744,7 @@ RFC 3533                          OGG                           May 2003
    page_size = header_size + sum(lacing_values: 1..number_page_segments)
    [Byte]
 
-7. Security Considerations
+<span class="h2"><a class="selflink" id="section-7" href="https://www.rfc-editor.org/rfc/rfc3533.html#section-7">7</a>. Security Considerations</span>
 
    The Ogg encapsulation format is a container format and only
    encapsulates content (such as Vorbis-encoded audio).  It does not
@@ -615,9 +763,9 @@ RFC 3533                          OGG                           May 2003
 
 
 
-Pfeiffer                     Informational                     [Page 11]
-
-RFC 3533                          OGG                           May 2003
+<span class="grey">Pfeiffer                     Informational                     [Page 11]</span></pre>
+<hr class="noprint"><!--NewPage--><pre class="newpage"><span id="page-12"></span>
+<span class="grey"><a href="https://www.rfc-editor.org/rfc/rfc3533">RFC 3533</a>                          OGG                           May 2003</span>
 
 
    such, Ogg does not pose a threat there.  However, an application
@@ -625,13 +773,13 @@ RFC 3533                          OGG                           May 2003
    correct handling of manipulated bitstreams, of buffer overflows and
    the like.
 
-8. References
+<span class="h2"><a class="selflink" id="section-8" href="https://www.rfc-editor.org/rfc/rfc3533.html#section-8">8</a>. References</span>
 
-   [1] Walleij, L., "The application/ogg Media Type", RFC 3534, May
+   [<a id="ref-1">1</a>] Walleij, L., "The application/ogg Media Type", <a href="https://www.rfc-editor.org/rfc/rfc3534">RFC 3534</a>, May
        2003.
 
-   [2] Bradner, S., "Key words for use in RFCs to Indicate Requirement
-       Levels", BCP 14, RFC 2119, March 1997.
+   [<a id="ref-2">2</a>] Bradner, S., "Key words for use in RFCs to Indicate Requirement
+       Levels", <a href="https://www.rfc-editor.org/bcp/bcp14">BCP 14</a>, <a href="https://www.rfc-editor.org/rfc/rfc2119">RFC 2119</a>, March 1997.
 
 
 
@@ -671,12 +819,12 @@ RFC 3533                          OGG                           May 2003
 
 
 
-Pfeiffer                     Informational                     [Page 12]
-
-RFC 3533                          OGG                           May 2003
+<span class="grey">Pfeiffer                     Informational                     [Page 12]</span></pre>
+<hr class="noprint"><!--NewPage--><pre class="newpage"><span id="page-13"></span>
+<span class="grey"><a href="https://www.rfc-editor.org/rfc/rfc3533">RFC 3533</a>                          OGG                           May 2003</span>
 
 
-Appendix A. Glossary of terms and abbreviations
+<span class="h2"><a class="selflink" id="appendix-A" href="https://www.rfc-editor.org/rfc/rfc3533.html#appendix-A">Appendix A</a>. Glossary of terms and abbreviations</span>
 
    bos page: The initial page (beginning of stream) of a logical
       bitstream which contains information to identify the codec type
@@ -727,23 +875,23 @@ Appendix A. Glossary of terms and abbreviations
 
 
 
-Pfeiffer                     Informational                     [Page 13]
-
-RFC 3533                          OGG                           May 2003
+<span class="grey">Pfeiffer                     Informational                     [Page 13]</span></pre>
+<hr class="noprint"><!--NewPage--><pre class="newpage"><span id="page-14"></span>
+<span class="grey"><a href="https://www.rfc-editor.org/rfc/rfc3533">RFC 3533</a>                          OGG                           May 2003</span>
 
 
    (Ogg) segment: The Ogg encapsulation process splits each packet into
       chunks of 255 bytes plus a last fractional chunk of less than 255
       bytes.  These chunks are called segments.
 
-Appendix B. Acknowledgements
+<span class="h2"><a class="selflink" id="appendix-B" href="https://www.rfc-editor.org/rfc/rfc3533.html#appendix-B">Appendix B</a>. Acknowledgements</span>
 
    The author gratefully acknowledges the work that Christopher
    Montgomery  and the Xiph.Org foundation have done in defining the Ogg
    multimedia project and as part of it the open file format described
    in this document.  The author hopes that providing this document to
    the Internet community will help in promoting the Ogg multimedia
-   project at http://www.xiph.org/.  Many thanks also for the many
+   project at <a href="http://www.xiph.org/">http://www.xiph.org/</a>.  Many thanks also for the many
    technical and typo corrections that C. Montgomery and the Ogg
    community provided as feedback to this RFC.
 
@@ -757,7 +905,7 @@ Author's Address
 
    Phone: +61 2 9325 3141
    EMail: Silvia.Pfeiffer@csiro.au
-   URI:   http://www.cmis.csiro.au/Silvia.Pfeiffer/
+   URI:   <a href="http://www.cmis.csiro.au/Silvia.Pfeiffer/">http://www.cmis.csiro.au/Silvia.Pfeiffer/</a>
 
 
 
@@ -783,9 +931,9 @@ Author's Address
 
 
 
-Pfeiffer                     Informational                     [Page 14]
-
-RFC 3533                          OGG                           May 2003
+<span class="grey">Pfeiffer                     Informational                     [Page 14]</span></pre>
+<hr class="noprint"><!--NewPage--><pre class="newpage"><span id="page-15"></span>
+<span class="grey"><a href="https://www.rfc-editor.org/rfc/rfc3533">RFC 3533</a>                          OGG                           May 2003</span>
 
 
 Full Copyright Statement
@@ -840,4 +988,5 @@ Acknowledgement
 
 
 Pfeiffer                     Informational                     [Page 15]
-
+</pre>
+<div id="imageDownloaderSidebarContainer"><div class="image-downloader-ext-container"><div tabindex="-1" class="b-sidebar-outer"><!----><div id="image-downloader-sidebar" tabindex="-1" role="dialog" aria-modal="false" aria-hidden="true" class="b-sidebar shadow b-sidebar-right bg-light text-dark" style="width: 500px; display: none;"><!----><div class="b-sidebar-body"><div></div></div><!----></div><!----><!----></div></div></div></body></html>

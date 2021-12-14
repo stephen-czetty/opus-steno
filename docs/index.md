@@ -18,7 +18,7 @@ This project is the one I picked for teaching myself golang.  I am starting with
 Creating this before I learn anything about Go.  As such, this is more of a high-level
 architecture without knowing how best to arrange it in a way Go likes.
 
- ### Initial thoughts
+### Initial thoughts
 
 - Need to learn how to structure a golang project ([#6](https://github.com/stephen-czetty/opus-steno/issues/6))
 - Will write an opus header parser from scratch (even if a library exists, using it defeats the purpose of learning the language) ([#1](https://github.com/stephen-czetty/opus-steno/issues/1))
@@ -28,6 +28,11 @@ architecture without knowing how best to arrange it in a way Go likes.
   - Given an opus stream, write a new one with different options (especially padding!) ([#3](https://github.com/stephen-czetty/opus-steno/issues/3))
   - Given an opus stream, place it into an ogg container ([#4](https://github.com/stephen-czetty/opus-steno/issues/4))
   - (Bonus) Muxer for opus plus a video stream ([#5](https://github.com/stephen-czetty/opus-steno/issues/5))
+
+### References
+
+- [Ogg Specification (RFC 3533)](reference/rfc3533-ogg-spec.html)
+- [Opus Specification (RFC 6716)](reference/rfc6716-opus-spec.html)
 
 ### Episodes
 
