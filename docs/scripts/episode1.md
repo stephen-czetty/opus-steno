@@ -21,3 +21,9 @@ the least-signifigant bit of the encoded audio itself, and maybe a hybrid option
 the project a success if the first mode is working well, but will relish the challenge of modes two and three.
   
 (Cut to OPUS documentation, describe the details, unscripted (?))
+
+I intend to start with a test project and then get started with code to read and parse the header of an OGG
+stream.  At this stage, I only want to be able to read the basic metadata stored in the header.  From there I will
+go on to read the other embedded metadata.
+
+So let's go ahead and jump right in.
