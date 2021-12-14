@@ -7,12 +7,6 @@ should ignore any data that is found in the padding.  This makes it ideal for st
 
 This project is the one I picked for teaching myself golang.  I am starting with basically zero knowledge.
 
-## Resources
-
-- [Opus File Format](https://tools.ietf.org/html/rfc6716) -- Look at padding
-- [Ogg container format](https://xiph.org/ogg/doc/rfc3533.txt)
-- [Matroska container format](https://www.matroska.org/technical/basics.html)
-
 ## Design
 
 Creating this before I learn anything about Go.  As such, this is more of a high-level
@@ -33,6 +27,11 @@ architecture without knowing how best to arrange it in a way Go likes.
 
 - [Ogg Specification (RFC 3533)](reference/rfc3533-ogg-spec.html)
 - [Opus Specification (RFC 6716)](reference/rfc6716-opus-spec.html)
+
+
+### External Resources
+
+- [Matroska container format](https://www.matroska.org/technical/basics.html)
 
 ### Episodes
 
