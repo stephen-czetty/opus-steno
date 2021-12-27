@@ -27,3 +27,8 @@ stream.  At this stage, I only want to be able to read the basic metadata stored
 go on to read the other embedded metadata.
 
 So let's go ahead and jump right in.
+
+[Create the initial project structure](https://dev.to/jinxankit/go-project-structure-and-guidelines-4ccm)
+(Give up on that and start over with a single file or two)
+[Create a test file](https://pkg.go.dev/testing)
+(Start writing code to read an OGG header)
